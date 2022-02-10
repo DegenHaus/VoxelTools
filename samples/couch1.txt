@@ -1,0 +1,31 @@
+# Goxel 0.10.8
+# One line per voxel
+# X Y Z RRGGBB
+-6 0 0 ffffff
+-4 0 0 ffffff
+-6 0 1 ffffff
+-5 0 1 ffffff
+-4 0 1 ffffff
+-6 0 2 ffffff
+-6 -5 0 ffffff
+-4 -5 0 ffffff
+-6 -5 1 ffffff
+-5 -5 1 ffffff
+-4 -5 1 ffffff
+-6 -4 1 ffffff
+-5 -4 1 ffffff
+-4 -4 1 ffffff
+-6 -3 1 ffffff
+-5 -3 1 ffffff
+-4 -3 1 ffffff
+-6 -2 1 ffffff
+-5 -2 1 ffffff
+-4 -2 1 ffffff
+-6 -1 1 ffffff
+-5 -1 1 ffffff
+-4 -1 1 ffffff
+-6 -5 2 ffffff
+-6 -4 2 ffffff
+-6 -3 2 ffffff
+-6 -2 2 ffffff
+-6 -1 2 ffffff
