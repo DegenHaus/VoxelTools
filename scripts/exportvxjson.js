@@ -1,5 +1,5 @@
 import fs from 'fs'
-
+import VoxelDataHelper from '../lib/VoxelDataHelper.js';
 
 function run(){
     console.log('Export VSJson')
@@ -23,7 +23,20 @@ function run(){
     let segmentsArray = []
     let compressedBytesArray = ""
 
+    let inputDataBuffer = fs.readFileSync( inputFileName )
+
+   
+
+    let rawVoxelData = VoxelDataHelper.buildRawVoxelDataFromText( inputDataBuffer )
+    console.log('rawVoxelData',rawVoxelData)
+
+    typesArray = VoxelDataHelper.buildTypesArray( rawVoxelData )
+    segmentsArray = VoxelDataHelper.buildSegmentsArray( rawVoxelData, typesArray )
+    compressedBytesArray = VoxelDataHelper.buildCompressedBytesArray(typesArray, segmentsArray)
     
+
+    console.log('uniqueTypes',typesArray)
+
 
     let rootFileName = modelName
     let outputFileName = rootFileName.concat('.vxjson')
