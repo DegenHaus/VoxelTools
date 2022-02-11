@@ -27,7 +27,14 @@ function run(){
 
    
 
-    let rawVoxelData = VoxelDataHelper.buildRawVoxelDataFromText( inputDataBuffer )
+    let rawVoxelDataResult = VoxelDataHelper.buildRawVoxelDataFromText( inputDataBuffer )
+
+    if(!rawVoxelDataResult.success){
+        console.error(rawVoxelDataResult.error)
+        return  
+    }
+
+    let rawVoxelData = rawVoxelDataResult.voxelArray
     console.log('rawVoxelData',rawVoxelData)
 
     typesArray = VoxelDataHelper.buildTypesArray( rawVoxelData )
